@@ -1,1 +1,1 @@
-clang -O0 -I../1-libraries/include -L../1-libraries/static/ -lgreetings-it -o bin/helloWorld-it-static-macOS helloWorld.c
+clang -O0 -I../1-libraries/include -L../1-libraries/static/macOS/ -lgreetings-it -o bin/macOS/helloWorld-it-static helloWorld.c

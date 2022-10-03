@@ -1,1 +1,1 @@
-clang -O3 -flto -I../1-libraries/include -L../1-libraries/lib64/ -lgreetings-bg -o bin/helloWorld-bg-optimized-macOS helloWorld.c
+clang -O3 -flto -I../1-libraries/include -L../1-libraries/lib64/macOS/ -lgreetings-bg -o bin/macOS/helloWorld-bg-optimized helloWorld.c

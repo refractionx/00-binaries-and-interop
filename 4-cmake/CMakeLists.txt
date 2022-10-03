@@ -14,7 +14,7 @@ set(CMAKE_C_FLAGS_RELEASE "-O2 -flto -Wall -Wextra")
 
 add_library(greetings STATIC IMPORTED)
 set_target_properties(greetings PROPERTIES
-  IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/../1-libraries/static/libgreetings-it.a"
+  IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/../1-libraries/static/macOS/libgreetings-it.a"
   INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_SOURCE_DIR}/../1-libraries/include"
 )
 
