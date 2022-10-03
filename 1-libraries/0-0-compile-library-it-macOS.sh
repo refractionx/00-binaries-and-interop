@@ -1,0 +1,1 @@
+clang -dynamiclib -O0 -Iinclude -o lib64/libgreetings-it.dylib greetings-it.c 
