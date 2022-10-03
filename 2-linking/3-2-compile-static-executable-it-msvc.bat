@@ -1,0 +1,1 @@
+cl -I../1-libraries/include /Febin/win64/helloWorld-it-static.exe helloWorld.c /link /LIBPATH:..\\1-libraries\\static\\win64 libgreetings-it.lib

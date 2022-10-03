@@ -1,6 +1,9 @@
+
 **/bin/**
 **/lib/**
 **/lib64/**
 **/static/**
 *.o
+*.obj
 **/build/**
+!.gitkeep

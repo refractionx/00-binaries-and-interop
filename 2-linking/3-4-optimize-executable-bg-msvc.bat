@@ -1,0 +1,1 @@
+cl /O2 -I../1-libraries/include /Febin/win64/helloWorld-bg-optimized.exe helloWorld.c /GL /link /LTCG /LIBPATH:..\\1-libraries\\lib64\\win64 libgreetings-bg.lib

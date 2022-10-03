@@ -1,0 +1,1 @@
+cl /O2 /GL /D_DLLEXPORT /LD /O2 -Iinclude greetings-bg.c  /Felib64/win64/libgreetings-bg.dll
