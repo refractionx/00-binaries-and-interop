@@ -10,4 +10,4 @@
 
 - Example code for C/C++ runtime to Java, C#, JavaScript and Python
 
-A research by Sam Aleksov @ [refractionx.com](https://refractionx.com).
+A research by Sam Aleksov / [refractionx.com](https://refractionx.com).
