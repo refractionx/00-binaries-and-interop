@@ -1,7 +1,12 @@
 import ctypes
 import sys
 
-greetings = ctypes.CDLL("libgreetings-bg.dylib")
+# macOS
+# greetings = ctypes.CDLL("libgreetings-bg.dylib")
+
+# Linux
+greetings = ctypes.CDLL("./libgreetings-bg.so")
+
 greetings.getGreetingMessage.argtype = []
 greetings.getGreetingMessage.restype = ctypes.c_char_p
 

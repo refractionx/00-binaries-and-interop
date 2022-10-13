@@ -27,6 +27,11 @@ elseif(CMAKE_GENERATOR MATCHES "Visual Studio")
     IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/../1-libraries/static/win64/libgreetings-it.lib"
     INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_SOURCE_DIR}/../1-libraries/include"
   )
+elseif(UNIX AND NOT APPLE)
+  set_target_properties(greetings PROPERTIES
+    IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/../1-libraries/static/linux64/libgreetings-it.a"
+    INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_SOURCE_DIR}/../1-libraries/include"
+  )
 else()
   set_target_properties(greetings PROPERTIES
     IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/../1-libraries/static/macOS/libgreetings-it.a"

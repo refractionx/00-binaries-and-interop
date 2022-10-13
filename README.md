@@ -10,4 +10,11 @@
 
 - Example code for C/C++ runtime to Java, C#, JavaScript and Python
 
+### Left to the user
+
+Play with different environment variables:
+ - DYLD_LIBRARY_PATH (macOS), LD_LIBRARY_PATH (linux), PATH (Windows)
+ - JAVA_HOME check to see what happends on different versions
+
+
 A research by Sam Aleksov / [refractionx.com](https://refractionx.com).

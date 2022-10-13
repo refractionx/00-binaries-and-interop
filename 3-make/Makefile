@@ -13,6 +13,11 @@ else
 		LDFLAGS = -L../1-libraries/static/win64 -lgreetings-it-mingw64-msys2
 		OUTPUT = bin/win64/helloWorld-mingw64-msys2.exe
 	endif
+
+	ifeq ($(UNAME),Linux)
+        LDFLAGS = -L../1-libraries/static/linux64 -lgreetings-it
+		OUTPUT = bin/linux64/helloWorld
+    endif
 endif
 
 .PHONY = all clean
