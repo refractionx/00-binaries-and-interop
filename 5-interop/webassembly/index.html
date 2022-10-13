@@ -1,0 +1,32 @@
+<html>
+    <head><title></title></head>
+    <body>
+
+        <script>
+            function cString2UTF8(memory, offset) {
+                const messageArray = new Uint8Array(memory.buffer, offset);
+            
+                let messageLength = 0;
+                while (messageArray[messageLength] != 0) messageLength++;
+                
+                return (new TextDecoder("utf-8")).decode(messageArray.slice(0, messageLength));
+            }
+
+            (async () => {
+                const moduleIT = await WebAssembly.instantiateStreaming(fetch("greetings-it.wasm"));
+                
+                const messageAddressOffset = moduleIT.instance.exports.getGreetingMessage();
+                
+                console.log(cString2UTF8(moduleIT.instance.exports.memory, messageAddressOffset));
+            })();
+
+            (async () => {
+                const moduleIT = await WebAssembly.instantiateStreaming(fetch("greetings-bg.wasm"));
+                
+                const messageAddressOffset = moduleIT.instance.exports.getGreetingMessage();
+                
+                console.log(cString2UTF8(moduleIT.instance.exports.memory, messageAddressOffset));
+            })();
+        </script>
+    </body>
+</html>
